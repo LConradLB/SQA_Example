@@ -3,6 +3,11 @@
 Product Details: 
 A fitness product that allows you to set a route on Google Maps. It then generates a video that will play through, depending on how far you move or cycle in a physical space.
 
+## Frontend Stack
+
+## Backend Stack
+
+## Testing Frameworks
 
 ## Continious Integration: Github actions
 This was chosen due to the tight integration with Github. On changes to the repo, be it raising a PR or merging to the main branch, we can run our unit tests to check for regression. Unlike other CI providers such as TravisCi, Github Actions is free to use - this allows us to run extensive testing suites without spending a dime. 
