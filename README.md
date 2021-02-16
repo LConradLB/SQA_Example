@@ -9,6 +9,46 @@ This was chosen due to the tight integration with Github. On changes to the repo
 
 We can also get a badge for a successful action that can be displayed in the readme or on other sites.
 
+Below is an example of a possible combined test and deployment script.
+The action will be run on a push to the repo and on a raised pull request.
+The action will run through all the available jobs in sequential order. 
+Under the `deploy` job the `needs` statement allows us to define prerequisites that need to pass before this job can run. Therefore in the below code, the `test` job needs to have completed successfully before running the `deploy` phase.
+
+```ruby
+name: CI Tests & Deply
+
+on:
+  [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install and test
+      run: |
+        npm install
+        npm test
+      env:
+        CI: true
+
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-latest
+
+    steps:
+        //Run some sort of deployment intergration here
+```
+
 
 ## Brief:
 Choose a role for each team member. 
