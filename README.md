@@ -15,7 +15,7 @@ The action will run through all the available jobs in sequential order.
 Under the `deploy` job the `needs` statement allows us to define prerequisites that need to pass before this job can run. Therefore in the below code, the `test` job needs to have completed successfully before running the `deploy` phase.
 
 ```ruby
-name: CI Tests & Deply
+name: CI Tests & Deploy
 
 on:
   [push, pull_request]
