@@ -1,1 +1,13 @@
+# Dependency directories
+
 node_modules
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+build/
+out/
+
+# Next.js build output
+.next
+
+
