@@ -4,8 +4,16 @@ Product Details:
 A fitness product that allows you to set a route on Google Maps. It then generates a video that will play through, depending on how far you move or cycle in a physical space.
 
 ## Frontend Stack
+For the front end, we opted for React. 
+In part, this is because the application can work as a single page application. 
+React is also one of the most commonly used front end frameworks to develop in. As such, it has an extensive library of components that can be used to create the application. 
+
+One of the first requirements for the application would be to show google maps, this can be added by importing `google-maps-react` component - the only requirement for this stage is to set up an API key in order to show the map.
 
 ## Backend Stack
+The backend will be using Node.JS. We can use the JS server to retrieve data to run the frontend, such as using APIs to retrieve data from Google Fit API or derive our own data directly from the accelerometer of the device.
+
+After getting data from the map, we could create a video of the route by stepping through Google Street View. We could then use the route distance and the distance the user has travel, from the accelerometer to scrub through the video and show the user where they are along their route. 
 
 ## Testing Frameworks
 
