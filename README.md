@@ -4,6 +4,13 @@ Product Details:
 A fitness product that allows you to set a route on Google Maps. It then generates a video that will play through, depending on how far you move or cycle in a physical space.
 
 
+## Continious Integration: Github actions
+This was chosen due to the tight integration with Github. On changes to the repo, be it raising a PR or merging to the main branch, we can run our unit tests to check for regression. Unlike other CI providers such as TravisCi, Github Actions is free to use - this allows us to run extensive testing suites without spending a dime. 
+
+We can also get a badge for a successful action that can be displayed in the readme or on other sites.
+
+
+## Brief:
 Choose a role for each team member. 
 The role each person has gives them the final word on stack items related to their role. (A Developer will make a final choice between Node and Java on the backend but everyone’s ideas are welcome).
 
