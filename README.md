@@ -17,6 +17,23 @@ After getting data from the map, we could create a video of the route by steppin
 
 ## Testing Frameworks
 
+### Backend tests (unit & integration tests) - using Mocha & Chai
+
+- Check the login and account related functionalities
+  - Create test accounts with stubs of test user data
+- Test the route planning and video display
+- Mock for the video server
+- Test correct video forwarding in sync with activity (walking, cycling)
+- Mock the Activity API ( https://developers.google.com/drive/activity/v2 )
+
+### Front end tests
+
+- Correct display of basic layout across browsers
+  - Snapshot tests (html) - JEST
+  - Screenshot tests (to compare images) - puppeteer
+- Correct display of videos
+  - Screenshot test?
+
 ## Continious Integration: Github actions
 This was chosen due to the tight integration with Github. On changes to the repo, be it raising a PR or merging to the main branch, we can run our unit tests to check for regression. Unlike other CI providers such as TravisCi, Github Actions is free to use - this allows us to run extensive testing suites without spending a dime. 
 
